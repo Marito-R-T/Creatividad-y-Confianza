@@ -57,3 +57,20 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", verificateValues, false);
+
+function verificateValues(evento) {
+    if (!form.checkValidity()) {
+        evento.preventDefault();
+        evento.stopPropagation();
+    } else {
+        console.log(`El nombre del Lead es: ${form['nombre'].value}`);
+        console.log(`El email del Lead es: ${form['email'].value}`);
+        console.log(`El comentario del Lead es: ${form['comentario'].value}`);
+    }
+
+    form.classList.add('was-validated');
+}
