@@ -70,6 +70,11 @@ function verificateValues(evento) {
         console.log(`El nombre del Lead es: ${form['nombre'].value}`);
         console.log(`El email del Lead es: ${form['email'].value}`);
         console.log(`El comentario del Lead es: ${form['comentario'].value}`);
+        let base_url = window.location;
+        let array = base_url.pathname.split('/');
+        let base = array.slice(0, array.length - 1).reduce((prev, curr) => prev + "/" + curr)
+        console.log(base);
+        window.location.href = `https://${base}/thanks.html`;
     }
 
     form.classList.add('was-validated');
