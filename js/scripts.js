@@ -74,7 +74,7 @@ function verificateValues(evento) {
         let array = base_url.pathname.split('/');
         let base = array.slice(0, array.length - 1).reduce((prev, curr) => prev + "/" + curr)
         console.log(base);
-        window.location.href = `https://${base}/thanks.html`;
+        window.location.href = `https://marito-r-t.github.io/${base}/thanks.html`;
     }
 
     form.classList.add('was-validated');
